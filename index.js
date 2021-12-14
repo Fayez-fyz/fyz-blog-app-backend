@@ -24,10 +24,7 @@ app.use(
 
 app.use("/api", userRoutes);
 app.use("/api", postRoutes);
-
 // readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
-
-mongoose.disconnect()
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
