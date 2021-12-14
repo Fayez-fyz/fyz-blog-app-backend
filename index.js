@@ -27,6 +27,8 @@ app.use("/api", postRoutes);
 
 // readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
 
+mongoose.disconnect()
+
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
